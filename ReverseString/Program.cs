@@ -13,12 +13,10 @@ namespace ReverseString
             string forwardString = "Hello world!";
             string[] words = forwardString.Split();
             
-            foreach (string word in words)
+            foreach (string word in words.Reverse<string>())
             {
                 Console.WriteLine(word);
             }
-
-
         }
     }
 }
