@@ -10,13 +10,28 @@ namespace ReverseString
     {
         static void Main(string[] args)
         {
-            string forwardString = "Hello world!";
-            string[] words = forwardString.Split();
-            
-            foreach (string word in words.Reverse<string>())
+            string answer;
+            do
             {
-                Console.WriteLine(word);
+                Console.WriteLine("Please input a sentence:");
+                string forwardString = Console.ReadLine();
+                string[] words = forwardString.Split();
+
+                foreach (string word in words.Reverse<string>())
+                {
+                    Console.WriteLine(word);
+                }
+
+                Console.WriteLine("Would you like to play again?");
+                answer = Console.ReadLine();
             }
+
+            while (answer == "yes");
+
+
+            Console.WriteLine("Thanks for playing!");
+
+            
         }
     }
 }
